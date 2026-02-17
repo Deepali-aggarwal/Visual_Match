@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Visual Product Matcher</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="top">
+        <h1>Visual Product Matcher</h1>
+        <p>Discover products that look alike</p>
+    </header>
+
+    <main class="app">
+        <aside class="history-panel">
+            <h3>Recent Scans</h3>
+            <div id="historyTrack" class="history-grid"></div>
+            <button class="clear-btn" onclick="clearSystem()">Clear Memory</button>
+        </aside>
+
+        <section class="panel">
+            <div class="upload-card" id="dropZone">
+                <p>Drag & drop image</p>
+                <span>or</span>
+                <input type="file" id="imageUpload" hidden accept="image/*">
+                <button onclick="document.getElementById('imageUpload').click()">Browse File</button>
+                <input type="text" id="imageUrl" placeholder="Paste image URL">
+            </div>
+
+            <div class="preview-card">
+                <img id="previewImage" src="https://via.placeholder.com/400x300/11172a/6366f1?text=Awaiting+Input">
+            </div>
+
+            <button id="searchBtn" class="primary">Find Similar</button>
+
+            <div class="filter">
+                <div class="label-row">
+                    <label>Similarity</label>
+                    <strong id="thresholdValue">60%</strong>
+                </div>
+                <input type="range" id="threshold" min="0" max="100" value="60">
+            </div>
+        </section>
+
+        <section class="results">
+            <div id="loading" class="skeleton" style="display: none;">Analyzing Image DNA...</div>
+            <div id="resultsGrid" class="results-grid"></div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
