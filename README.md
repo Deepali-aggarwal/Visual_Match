@@ -1,2 +1,59 @@
-Visual Product Matcher 🔍✨A high-performance, client-side visual search engine designed to identify and rank product similarities using pixel-data analysis. This project demonstrates advanced DOM manipulation, Computer Vision concepts via the Canvas API, and System Architecture for optimized data processing.🚀 Key FeaturesFast DNA Matching Algorithm: Instead of heavy server-side processing, this app extracts a "Feature Vector" (DNA) from images for near-instant similarity calculations.Intelligent History Tracking: Implements a custom LRU-style (Least Recently Used) history sidebar using localStorage for session persistence.Modern Glassmorphism UI: A sleek, SaaS-inspired interface built with advanced CSS (Backdrop filters, Radial gradients, and Responsive Grids).Dynamic Sensitivity Control: Real-time filtering of results using a similarity threshold slider.Zero-Backend Architecture: Fully functional client-side logic, making it fast, secure, and easy to deploy.🛠️ Technical Deep Dive1. Image Feature ExtractionThe core engine utilizes the HTML5 Canvas API to process image data. To ensure high performance, the system:Downsamples the source image to a $50 \times 50$ pixel matrix.Iterates through the ImageData buffer to calculate the mean RGB values.Generates a "Color DNA" object used for mathematical comparison.2. Similarity MathematicsSimilarity is determined using the Euclidean Distance formula in a 3D color space. The distance ($d$) between the target image and a database product is calculated as:$$d = \sqrt{(R_{target} - R_{prod})^2 + (G_{target} - G_{prod})^2 + (B_{target} - B_{prod})^2}$$The raw distance is then normalized into a 0-100% score for user readability.3. State Management & PersistenceThe application state (last scan, similarity threshold, and recent history) is managed via localStorage. This ensures that a browser refresh does not interrupt the user's workflow—a critical "Pro" feature in modern web apps.💻 Tech StackLanguage: JavaScript (ES6+)Styling: CSS3 (Custom Variables, Flexbox, Grid)Markup: HTML5Storage: Web Storage API (LocalStorage)Processing: HTML5 Canvas API📖 How to UseInput: Drag and drop an image or paste a URL into the control panel.Analyze: Click "Find Similar" to trigger the DNA extraction.Refine: Use the Similarity Slider to filter matches based on your preferred sensitivity.Recall: Click any item in the Recent Scans sidebar to re-load a previous analysis.🛠️ Installation & SetupSince this is a pure frontend project, no installation is required.Clone the repository:Bashgit clone https://github.com/your-username/visual-product-matcher.git
-Open index.html in any modern web browser.
+🖼️ Visual Product Matcher
+
+A web-based application that helps users find visually similar products by analyzing an uploaded image or image URL.
+The project focuses on practical frontend image analysis, clean UI/UX, and real-world problem-solving without relying on heavy AI/ML models.
+
+🚀 Live Demo
+
+🔗 Live URL: https://your-live-link-here
+🔗 GitHub Repo: https://github.com/your-username/visual-product-matcher
+
+✨ Features
+
+📤 Image Upload
+
+Upload image via file system
+
+Paste image URL directly
+
+🖼️ Image Preview
+
+View uploaded image before analysis
+
+🔍 Visual Similarity Search
+
+Finds products with similar visual appearance
+
+Similarity score shown in percentage
+
+🎚️ Similarity Filter
+
+Filter results using similarity threshold
+
+💾 Local Storage Support
+
+Stores last search results for persistence
+
+⏳ Loading & Error States
+
+Graceful handling of slow or failed image processing
+
+📱 Responsive UI
+
+Works across desktop and mobile devices
+
+🛠️ Tech Stack
+
+HTML5 – Structure
+
+CSS3 – Modern UI & responsive design
+
+JavaScript (Vanilla) – Core logic & image processing
+
+Canvas API – Pixel-based image feature extraction
+
+LocalStorage – Client-side data persistence
+
+❌ No backend
+❌ No paid APIs
+❌ No heavy AI/ML libraries
