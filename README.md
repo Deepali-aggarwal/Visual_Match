@@ -5,8 +5,8 @@ The project focuses on practical frontend image analysis, clean UI/UX, and real-
 
 🚀 Live Demo
 
-🔗 Live URL: https://your-live-link-here
-🔗 GitHub Repo: https://github.com/your-username/visual-product-matcher
+🔗 Live URL:(https://visual-match.vercel.app/)
+🔗 GitHub Repo: [h(https://github.com/Deepali-aggarwal/Visual_Match/tree/main)
 
 ✨ Features
 
